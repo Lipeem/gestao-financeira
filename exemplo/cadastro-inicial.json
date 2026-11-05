@@ -1,0 +1,311 @@
+{
+ "tipo": "gestao-financeira-cadastro",
+ "versao": "15.3.0",
+ "geradoEm": "2026-11-04T14:00:00-03:00",
+ "config": {
+  "main": {
+   "reservaMin": 1000,
+   "faixas": [
+    -500,
+    0,
+    1000,
+    2000
+   ],
+   "diarioPadrao": 70,
+   "formaPadrao": "Débito",
+   "diario": {},
+   "titulo": "Gestão Financeira",
+   "subtitulo": "termômetro do caixa"
+  },
+  "categorias": {
+   "lista": [
+    {
+     "id": "CAT-001",
+     "categoria": "Trabalho/Renda",
+     "subcategoria": "Salário",
+     "tipo": "entrada",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-002",
+     "categoria": "Trabalho/Renda",
+     "subcategoria": "Freelance",
+     "tipo": "entrada",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-003",
+     "categoria": "Trabalho/Renda",
+     "subcategoria": "Outras Receitas",
+     "tipo": "entrada",
+     "natureza": "Variável",
+     "ativa": true
+    },
+    {
+     "id": "CAT-004",
+     "categoria": "Moradia",
+     "subcategoria": "Condomínio",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-005",
+     "categoria": "Moradia",
+     "subcategoria": "Financiamento",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-006",
+     "categoria": "Moradia",
+     "subcategoria": "Luz",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-007",
+     "categoria": "Moradia",
+     "subcategoria": "Gás",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-008",
+     "categoria": "Moradia",
+     "subcategoria": "Internet",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-009",
+     "categoria": "Moradia",
+     "subcategoria": "Manutenção",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 0
+    },
+    {
+     "id": "CAT-010",
+     "categoria": "Educação",
+     "subcategoria": "Escola",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-011",
+     "categoria": "Educação",
+     "subcategoria": "Previdência",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-012",
+     "categoria": "Educação",
+     "subcategoria": "Material/Cursos",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 0
+    },
+    {
+     "id": "CAT-013",
+     "categoria": "Saúde",
+     "subcategoria": "Seguro de vida",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-014",
+     "categoria": "Saúde",
+     "subcategoria": "INSS",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-015",
+     "categoria": "Saúde",
+     "subcategoria": "Farmácia",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 120.0
+    },
+    {
+     "id": "CAT-016",
+     "categoria": "Saúde",
+     "subcategoria": "Médico/Exames",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 120.0
+    },
+    {
+     "id": "CAT-017",
+     "categoria": "Alimentação",
+     "subcategoria": "Mercado",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 420.0
+    },
+    {
+     "id": "CAT-018",
+     "categoria": "Alimentação",
+     "subcategoria": "iFood/Delivery",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 110.0
+    },
+    {
+     "id": "CAT-019",
+     "categoria": "Alimentação",
+     "subcategoria": "Restaurantes",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 110.0
+    },
+    {
+     "id": "CAT-020",
+     "categoria": "Transporte",
+     "subcategoria": "Uber",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 150.0
+    },
+    {
+     "id": "CAT-021",
+     "categoria": "Transporte",
+     "subcategoria": "Gasolina",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 150.0
+    },
+    {
+     "id": "CAT-022",
+     "categoria": "Transporte",
+     "subcategoria": "Estacionamento",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 0
+    },
+    {
+     "id": "CAT-023",
+     "categoria": "Transporte",
+     "subcategoria": "Estacionamento Avulso",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 150.0
+    },
+    {
+     "id": "CAT-024",
+     "categoria": "Pessoal",
+     "subcategoria": "Beleza",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 210.0
+    },
+    {
+     "id": "CAT-025",
+     "categoria": "Pessoal",
+     "subcategoria": "Diarista",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-026",
+     "categoria": "Pessoal",
+     "subcategoria": "Vestuário",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 0
+    },
+    {
+     "id": "CAT-027",
+     "categoria": "Assinaturas",
+     "subcategoria": "Apps e streaming",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-028",
+     "categoria": "Assinaturas",
+     "subcategoria": "Outras",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 0
+    },
+    {
+     "id": "CAT-029",
+     "categoria": "Bancário",
+     "subcategoria": "Tarifa bancária",
+     "tipo": "saida",
+     "natureza": "Fixa",
+     "ativa": true
+    },
+    {
+     "id": "CAT-030",
+     "categoria": "Bancário",
+     "subcategoria": "Juros/IOF",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 0
+    },
+    {
+     "id": "CAT-031",
+     "categoria": "Outros",
+     "subcategoria": "Diversos",
+     "tipo": "saida",
+     "natureza": "Variável",
+     "ativa": true,
+     "orcamento": 260.0
+    }
+   ],
+   "grupos": []
+  }
+ },
+ "contas": {
+  "conta-principal": {
+   "id": "conta-principal",
+   "nome": "Conta Corrente",
+   "tipo": "conta",
+   "padrao": true,
+   "ativa": true
+  },
+  "cartao-principal": {
+   "id": "cartao-principal",
+   "nome": "Cartão Crédito",
+   "tipo": "cartao",
+   "fechamento": null,
+   "vencimento": null,
+   "pagadora": "conta-principal",
+   "padrao": true,
+   "ativa": true
+  }
+ },
+ "recorrentes": {},
+ "metas": {}
+}

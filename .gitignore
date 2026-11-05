@@ -1,0 +1,16 @@
+# Google Drive
+desktop.ini
+
+# Contexto e dados de cada instalação: nunca vão para o repositório
+CLAUDE.local.md
+*.xlsx
+artefato/seed/
+artefato/backup/
+artefato/versoes/
+teste/
+.claude/
+
+# Material antigo (design em teste separado e extração do script)
+artefato/design/
+artefato/gestao-financeira-ios.html
+artefato/gestao-financeira.extracted.js
