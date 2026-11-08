@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Falha de segurança
+    url: https://github.com/Lipeem/gestao-financeira/security/advisories/new
+    about: Relate em particular, nunca numa issue pública.
+  - name: Como instalar e usar
+    url: https://github.com/Lipeem/gestao-financeira#instalar
+    about: O passo a passo está no README; dentro do painel, a aba Guia explica cada tela.

@@ -452,6 +452,18 @@ quando recebe ferramentas e a pergunta é de histórico ("quanto … em 2026"). 
 sem notificações, pasta do backup, relatórios, resumo, histórico na Conversa, atalho). Use o viewport `mobile` do navegador para `__overflow()` (com o painel estreito a medida engana).
 Depois publique e faça uma leitura de volta com `ArtifactData`.
 
+**Tudo de uma vez:** `python artefato/testes/rodar_testes.py` (Playwright; `CANAL=chrome` usa o Chrome instalado, como
+neste computador) roda todas as baterias acima em sequência, cada uma numa página nova, e sai com código 1 se algo
+falhar. É o mesmo comando da verificação do GitHub (`.github/workflows/verificar.yml`, que também roda o `check.js`,
+`node --check` nos dois scripts, confere os JSON e exige que `VERSAO` esteja no `CHANGELOG.md` e no selo de versão do
+`README.md`). Bateria nova entra na lista `SUITES` do `rodar_testes.py`. Tela que muda de aparência: refazer as
+imagens do README com `python artefato/testes/imagens_readme.py` (painel de demonstração "Casa Exemplo", só dados
+inventados; grava em `docs/imagens/`).
+
+**Repositório público:** além do código, `README.md` (com imagens), `CONTRIBUTING.md`, `SECURITY.md`,
+`CODE_OF_CONDUCT.md`, `docs/ARQUITETURA.md`, `.github/` (modelos de issue e de pull request, verificação) e `LICENSE`
+(MIT). A cada versão: selo e tabela de versões do README, CHANGELOG e, se for o caso, as imagens.
+
 ## Backup
 
 `artefato/backup/AAAA-MM-DD/<coleção>/<id>.json`, feito com `ArtifactData list` + `out_dir` em todas as coleções

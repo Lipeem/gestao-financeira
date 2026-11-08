@@ -1,0 +1,69 @@
+name: Erro
+description: Algo no painel não funciona como deveria.
+title: "[Erro] "
+labels: ["erro"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar. **Não cole dados reais**: nada de lançamentos, saldos, extratos, nomes ou o link do seu painel. Use valores inventados.
+  - type: textarea
+    id: oque
+    attributes:
+      label: O que aconteceu
+      description: Descreva o problema em poucas frases.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para repetir
+      placeholder: |
+        1. Abri a aba …
+        2. Toquei em …
+        3. Apareceu …
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que você esperava
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão do painel
+      description: Plano → Ambiente e versão (ou o fim do Guia).
+      placeholder: "15.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Onde aconteceu
+      multiple: true
+      options:
+        - Celular (navegador)
+        - Celular (app do Claude)
+        - Computador (navegador)
+        - Computador (app do Claude)
+    validations:
+      required: true
+  - type: input
+    id: aparelho
+    attributes:
+      label: Aparelho e navegador
+      placeholder: "iPhone 14, Safari / Windows 11, Chrome"
+  - type: textarea
+    id: extra
+    attributes:
+      label: Imagens ou mais detalhes
+      description: Prints só com dados inventados ou com os números cobertos.
+  - type: checkboxes
+    id: privacidade
+    attributes:
+      label: Privacidade
+      options:
+        - label: Não colei dados financeiros reais, nomes nem o link do meu painel.
+          required: true

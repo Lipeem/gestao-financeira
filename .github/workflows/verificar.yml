@@ -1,0 +1,60 @@
+name: Verificar
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Botões com ação e campos existentes
+        run: node artefato/testes/check.js artefato/gestao-financeira.html
+
+      - name: Sintaxe dos dois scripts da página
+        run: |
+          python - <<'EOF'
+          import re
+          s = open("artefato/gestao-financeira.html", encoding="utf-8").read()
+          for i, bloco in enumerate(re.findall(r"<script>(.*?)</script>", s, re.S)):
+              open(f"/tmp/script{i}.js", "w", encoding="utf-8").write(bloco)
+          EOF
+          for f in /tmp/script*.js; do node --check "$f"; done
+
+      - name: Arquivos JSON válidos
+        run: python -c "import glob, json; [json.load(open(f, encoding='utf-8')) for f in glob.glob('**/*.json', recursive=True)]"
+
+      - name: Versão da página no CHANGELOG e no README
+        run: |
+          python - <<'EOF'
+          import re, sys
+          v = re.search(r'const VERSAO = "([^"]+)"', open("artefato/gestao-financeira.html", encoding="utf-8").read()).group(1)
+          erros = []
+          if f"## {v} " not in open("CHANGELOG.md", encoding="utf-8").read(): erros.append(f"CHANGELOG.md sem a seção {v}")
+          if f"-{v}-" not in open("README.md", encoding="utf-8").read(): erros.append(f"selo de versão do README diferente de {v}")
+          print("versão da página:", v)
+          if erros: print("\n".join(erros)); sys.exit(1)
+          EOF
+
+      - name: Instalar o navegador de teste
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+
+      - name: Baterias de teste (banco e Claude simulados)
+        run: python artefato/testes/rodar_testes.py

@@ -1,0 +1,30 @@
+name: Ideia
+description: Uma melhoria ou função nova para o painel.
+title: "[Ideia] "
+labels: ["ideia"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema ela resolve
+      description: Conte a situação do dia a dia em que você sente falta disso.
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Como você imagina
+      description: Onde apareceria (Hoje, Mês, Plano, Conversa…) e o que faria.
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: O que você faz hoje no lugar
+  - type: checkboxes
+    id: privacidade
+    attributes:
+      label: Privacidade
+      options:
+        - label: Não colei dados financeiros reais, nomes nem o link do meu painel.
+          required: true
