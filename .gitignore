@@ -14,3 +14,10 @@ teste/
 artefato/design/
 artefato/gestao-financeira-ios.html
 artefato/gestao-financeira.extracted.js
+
+# Pastas locais de cada instalação (nunca vão para o repositório):
+# a vida financeira real (extratos, faturas, análises) e o histórico de sistemas antigos
+financas/
+acervo/
+MVP Financeiro/
+_de E-OneDrive-Documents/
